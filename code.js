@@ -30,10 +30,6 @@ switch (randomNumber) {
 }
 console.log(randomNumber); }
 
-window.onload = function playerSelection () {
-    let ask = prompt("What is your weapon of choice?")
-    
-}
 
 
 //Prompt User for weapon choice//
