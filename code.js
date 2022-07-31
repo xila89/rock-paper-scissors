@@ -1,75 +1,50 @@
 
-//Assign Choices - Rock, Paper, Scissors, Lizard, Spock// //Or Boulder, Parchment, Shears (Critical Role Reference)//
 
-//Get Random number 0-4 (for each choice)//
+let playerScore = 0;
+let computerScore = 0;
 
 
-//Get Computer Choice 0-4//
+//prompt for user choice//
+window.onload = function playRound() {
+let userChoice = prompt("What weapon will you choose?");
+userChoice = userChoice.toLowerCase();
 
-function getComputerChoice () {
+//create array for weapons and get computer choice//
+    const weaponChoices =  ["rock", "paper", "scissors", "lizard", "spock"];
+    const randomNumber = Math.floor(Math.random() * 5);
+    let computerChoice = weaponChoices[randomNumber]; 
 
-    let randomNumber = Math.floor(Math.random() * 5);
+    console.log (`You chose ${userChoice} and the computer chose ${computerChoice}`); 
+//output of both choices//
 
-    //assign strings to number//
-    switch (randomNumber) {
-        case 0:
-            console.log("Rock");
-            break;
-        case 1:
-            console.log("Paper");
-            break;
-        case 2:
-            console.log("Scissors");
-            break;
-        case 3:
-            console.log("Lizard");
-            break;
-        case 4:
-            console.log("Spock");
-            break;
+//create an array with game rules and outcomes//
+const results = [
+    ["t","u","c","c","u"],
+    ["c","t","u","u","c"],
+    ["u","c","t","c","u"],
+    ["c","c","u","t","u"],
+    ["c","u","c","u","t"],
+];
 
-    }
-    return "Computer selected " + randomNumber;
+let playerChoiceIndex = weaponChoices.indexOf(userChoice);
+let userResult = results[randomNumber][playerChoiceIndex];
+
+//round results/
+const resultIndex = {
+    "t": "It's a tie! Try again.",
+    "u": "You win! Yaaay!",
+    "c": "The computer wins. Better luck next time.", 
+};
+
+console.log(resultIndex[userResult] +playerScore, +computerScore);
 }
-//Prompt User for weapon choice//
-function playRound () {
 
-    let weapon = prompt ("What weapon do you choose?");
-    switch (weapon) {
-        case "rock", 0:
-        break;
-        case "paper", 1:
-        break;
-        case "scissors", 2:
-            break;
-        case "lizard", 3:
-            break;
-        case "spock", 4:
-            break;
-    }
+function playGame (playRound) {
 
-            return "You chose " + weapon;
-    }
-
-const playerSelection = "rock";
-const computerSelection  = getComputerChoice;
-console.log(playRound(playerSelection, computerSelection));
-
-//game rules//
+}
+//repeat game 5x//
 
 
 
 
 
-
-
-
-
-
-//In the event of a tie//
-
-//Display winner
-
-//Repeat x5//
-
-//Reset game//
