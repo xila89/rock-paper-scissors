@@ -4,12 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="code.js" defer></script>
     <title>Rock, Paper, Scissors</title>
    
 </head>
 <body>
     <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
-    <p>What weapon will you choose?</p>
-    <script src="code.js"></script>
+    <h2>What weapon will you choose?</h2>
+    
+    <div class="game-container">      
+       <div id="button-container">
+        <button id="rock" name="rock" value="rock">
+            <img src="./images/rock-icon-edit1.png"><span>Rock</span></button>
+        <button id="paper" value="paper">Paper</button>
+        <button id="scissors" value="scissors">Scissors</button>
+        <button id="lizard" value="lizard">Lizard</button>
+        <button id="spock" value="spock">Spock</button>
+       </div>
+       <div id="alien-container">
+        <div id="alien" class="alienimg">
+            <img src="./images/friendly-alien-edit.png" alt="friendly blue alien" />
+        </div>
+        </div>
+    <div id="scoreboard" class="infinity">
+        The score is 
+        <br>
+        computer vs. user
+        <img src="./images/infinity1.png" alt="infinity symbol"/>
+    </div>
+  </div>
+
+ 
+   
 </body>
 </html>

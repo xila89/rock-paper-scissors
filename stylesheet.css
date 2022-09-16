@@ -1,0 +1,153 @@
+@font-face {
+    font-family: HennyPenny;
+    src: url(./fonts/Henny_Penny/HennyPenny-Regular.ttf);
+}
+@font-face {
+    font-family: Hamurz;
+    src: url(./fonts/hamurz/Hamurz\ Free\ Version.ttf);
+}
+@font-face {
+    font-family: Dynapuff;
+    src: url(./fonts/DynaPuff/DynaPuff-VariableFont_wdth\,wght.ttf);
+}
+body {
+    margin: 0; 
+    background-color: black;
+    background-image: url("./images/space-background-final.svg");
+    
+}
+h1 {
+    
+    font-size: 52px;
+    display: flex; 
+    justify-content: center;
+    flex-direction: row;
+    color: white; 
+    font-family: "HennyPenny";
+    text-align: center;
+    text-shadow: 
+      0 -1px 0 #fff, 
+      0 1px 0 #2e2e2e, 
+      0 2px 0 #2c2c2c, 
+      0 3px 0 #2a2a2a, 
+      0 4px 0 #282828, 
+      0 5px 0 #262626, 
+      0 6px 0 #242424, 
+      0 7px 0 #222, 
+      0 8px 0 #202020, 
+      0 9px 0 #1e1e1e, 
+      0 10px 0 #1c1c1c, 
+      0 11px 0 #1a1a1a, 
+      0 12px 0 #181818, 
+      0 13px 0 #161616, 
+      0 14px 0 #141414, 
+      0 15px 0 #121212, 
+      0 22px 30px rgba(0, 0, 0, 0.9);
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: "Dynapuff";
+    font-size: x-large;
+    text-shadow: 
+    0 -1px 0 #fff, 
+    0 1px 0 #2e2e2e, 
+    0 2px 0 #2c2c2c, 
+    0 3px 0 #2a2a2a, 
+    0 4px 0 #282828, 
+    0 5px 0 #262626, 
+    0 6px 0 #242424, 
+    0 7px 0 #222, 
+    0 8px 0 #202020, 
+    0 9px 15px rgba(0, 0, 0, 0.9);
+                
+}
+#game-container {
+    display: flex;
+ 
+
+}
+#button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: auto;
+
+}
+button {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    margin: 25px;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-color: transparent;
+    justify-content: center;
+   
+}
+span {
+    display: none;
+}
+
+button:hover span {
+display: block;
+}
+button:hover {
+transform: scale(1.5) perspective(10px);
+font-family: "Hamurz";
+color: white !important;
+-webkit-text-stroke: 1px white; 
+text-shadow:
+0 0 5px pink, 0 0 10px magenta,
+0 0 20px purple, 0 0 40px aqua;
+
+
+}
+#alien-container {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+
+}
+
+#alien img {
+    width: 400px;
+    height: auto;
+    margin: 115px;
+}
+
+.infinity {
+    float: right;
+    align-items: flex-end;
+    justify-content: center;
+   display: flex;
+   width: 600px;
+   height: 400px;
+   margin-top: -550px;
+   margin-right: 100px;
+   background-color: black;
+   border-radius: 95px;
+   border-style: groove;
+   border-color: aqua;
+   
+}
+
+#scoreboard {
+    font-family: "Dynapuff";
+    display: flex;
+    flex-direction: column;
+    color: aqua;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.scorebored img {
+    align-content: center;
+    justify-content: center;
+}
+
+
