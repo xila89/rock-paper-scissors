@@ -10,7 +10,6 @@ let weapons = document.querySelectorAll('.weapons');
 // Array variables // 
 
 const weaponry = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
-const randomNumber = Math.floor(Math.random() * 5);
 
 // result index array //
 
@@ -36,21 +35,26 @@ weaponButtons.forEach(function(id) {
             console.log(computerWeapon);
             const playerPick = event.target.id;
             console.log(playerPick);
+           
 
             //invoke game functions//
+            
             game(playerPick, computerWeapon);
             checkWinner();
+            getRandomNum();
 
 
             function game(playerPick, computerWeapon) {
+
+                // array for results //
+
                 const results = [
                     ["t", "u", "c", "c", "u"],
                     ["c", "t", "u", "u", "c"],
-                    ["u", "c", "t", "c", "u"],
-                    ["c", "c", "u", "t", "u"],
+                    ["u", "c", "t", "c", "c"],
+                    ["u", "c", "u", "t", "c"],
                     ["c", "u", "c", "u", "t"],
                 ];
-
                 let playerChoiceIndex = weaponry.indexOf(playerPick);
                 let userResult = results[randomNumber][playerChoiceIndex];
 
@@ -85,7 +89,7 @@ weaponButtons.forEach(function(id) {
             }
 
 
-            // check winner and display results once a score reaches 5 points//
+            // check winner and display final winner once a score reaches 5 points//
 
             function checkWinner() {
                 if (playerScore === 5) {
@@ -98,11 +102,18 @@ weaponButtons.forEach(function(id) {
             }
         })
     })
+ 
 })
 
 // get computer choice //
 
 function getComputerChoice() {
-    const randomNumber = Math.floor(Math.random() * 5);
-    return weaponry[randomNumber];
+    let randomNumber = getRandomNum();
+    let computerChoice =  weaponry[randomNumber];
+    return computerChoice; 
+}
+
+function getRandomNum() {
+    randomNumber = Math.floor(Math.random() * 5);
+    return randomNumber; 
 }
