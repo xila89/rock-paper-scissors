@@ -35,10 +35,10 @@ weaponButtons.forEach(function(id) {
             console.log(computerWeapon);
             const playerPick = event.target.id;
             console.log(playerPick);
-           
+
 
             //invoke game functions//
-            
+
             game(playerPick, computerWeapon);
             checkWinner();
             getRandomNum();
@@ -62,17 +62,17 @@ weaponButtons.forEach(function(id) {
 
                 if (userResult == "c") {
                     computerScore++;
-                    weaponsChosen.innerText = `You chose ${playerPick} and the computer chose ${computerWeapon}`; 
+                    weaponsChosen.innerText = `You chose ${playerPick} and the computer chose ${computerWeapon}`;
                     score.innerText = `Computer Score: ${computerScore} | Player Score: ${playerScore}`;
                 }
 
                 if (userResult == "u") {
                     playerScore++;
-                    weaponsChosen.innerText = `You chose ${playerPick} and the computer chose ${computerWeapon}`; 
+                    weaponsChosen.innerText = `You chose ${playerPick} and the computer chose ${computerWeapon}`;
                     score.innerText = `Computer Score: ${computerScore} | Player Score: ${playerScore}`;
 
                 } else if (userResult == "t") {
-                    weaponsChosen.innerText = `You chose ${playerPick} and the computer chose ${computerWeapon}`; 
+                    weaponsChosen.innerText = `You chose ${playerPick} and the computer chose ${computerWeapon}`;
                     score.innerText = `Computer Score: ${computerScore} | Player Score: ${playerScore}`;
                     fightText.innerText = `It's a tie!`;
 
@@ -98,22 +98,21 @@ weaponButtons.forEach(function(id) {
                     fightText.innerText = 'Bad news no one. That darn computer won! Better luck next time.';
                 }
 
-
             }
         })
     })
- 
+
 })
 
 // get computer choice //
 
 function getComputerChoice() {
     let randomNumber = getRandomNum();
-    let computerChoice =  weaponry[randomNumber];
-    return computerChoice; 
+    let computerChoice = weaponry[randomNumber];
+    return computerChoice;
 }
 
 function getRandomNum() {
     randomNumber = Math.floor(Math.random() * 5);
-    return randomNumber; 
+    return randomNumber;
 }
