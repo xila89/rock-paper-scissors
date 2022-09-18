@@ -17,7 +17,7 @@
 
 body {
     display: flex;
-    overflow: hidden;
+
     flex-direction: column;
     justify-content: space-between;
     background-image: url(./images/space-background-final.svg);
