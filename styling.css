@@ -1,0 +1,267 @@
+/* import and declare fonts */
+
+@font-face {
+    font-family: HennyPenny;
+    src: url(./fonts/Henny_Penny/HennyPenny-Regular.ttf);
+}
+@font-face {
+    font-family: Hamurz;
+    src: url(./fonts/hamurz/Hamurz\ Free\ Version.ttf);
+}
+@font-face {
+    font-family: Dynapuff;
+    src: url(./fonts/DynaPuff/DynaPuff-VariableFont_wdth\,wght.ttf);
+}
+
+/* body styling */
+
+body {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(./images/space-background-final.svg);
+    background-repeat: no-repeat;
+    background-color: black;
+    margin: auto;
+
+}
+
+/* game over area and text */
+
+.game-over {
+    font-size: xx-large;
+    text-align: center;
+}
+
+
+h1 {
+    font-family: 'HennyPenny'; 
+    font-size: 75px;
+    text-align: center;
+    color: white; 
+    text-shadow: 
+    0 -1px 0 #fff, 
+    0 1px 0 #2e2e2e, 
+    0 2px 0 #2c2c2c, 
+    0 3px 0 #2a2a2a, 
+    0 4px 0 #282828, 
+    0 5px 0 #262626, 
+    0 6px 0 #242424,
+    0 10px 5px rgba(0, 0, 0, 0.9);
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: "Dynapuff";
+    font-size: x-large;
+    text-shadow: 
+    0 -1px 0 #fff, 
+    0 1px 0 #2e2e2e, 
+    0 2px 0 #2c2c2c, 
+    0 3px 0 #2a2a2a, 
+    0 4px 0 #282828,  
+    0 9px 15px rgba(0, 0, 0, 0.9);
+}
+
+/* button styling */
+
+
+.play-again button {
+    width: 150px;
+    font-family: "Dynapuff";
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.weapons {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.weapons button {
+    border-radius: 50px;
+    background-color: transparent;
+    justify-content: space-between;
+    border-style: none;
+    margin: 20px;
+    width: 120px;
+    height: 120px;
+    background-position: center;
+
+    color: white; 
+    font-family: "Dynapuff";
+    font-size: 25px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    text-shadow:
+    0 0 5px pink, 0 0 10px magenta,
+    0 0 20px purple, 0 0 40px aqua;
+} 
+
+button:hover {
+    padding: 0px;
+    transform: scale(1.5) perspective(20px);
+    font-family: "Dynapuff";
+    text-align: center;
+    align-items: center;
+    color: white !important;
+    -webkit-text-stroke: 1px white; 
+    text-shadow:
+    0 0 5px pink, 0 0 10px magenta,
+    0 0 20px purple, 0 0 40px aqua;
+    }
+
+.weapons #rock {
+    background-image: url(./images/rock-icon-edit1.png);
+    background-size: 120px; 
+    background-repeat: no-repeat;
+
+}
+
+.weapons #paper {
+    background-image: url(./images/paper-icon-edit.png);
+    background-size: 120px;
+    background-repeat: no-repeat;
+}
+
+.weapons #scissors {
+    background-image: url(./images/scissors-icon-edit.png);
+    background-size: 120px;
+    background-repeat: no-repeat;
+}
+
+.weapons #lizard {
+    background-image: url(./images/lizard-icon-edit.png);
+    background-size: 120px;
+    background-repeat: no-repeat;
+}
+
+.weapons #spock {
+    background-image: url(./images/spock-icon-edit.png);
+    background-size: 120px;
+    background-repeat: no-repeat;
+}
+
+    .play-again {
+        font-family: "Dynapuff";
+        margin: 50px;
+        display: flex;
+        align-items: center;
+      
+    }
+    .play-again #restart {
+        display: flex;
+        padding: 5px;
+        background-color: aqua;
+        border: solid 1px;
+        border-radius: 25px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        padding: 300px;
+        justify-content: space-evenly;
+        font-family: "Dynapuff";
+    }
+
+.round {
+    display: flex;
+    color: white;
+    font-family: "Dynapuff";
+    font-size: 40px;
+    width: 200px;
+    text-shadow:
+    0 0 5px pink, 0 0 10px magenta,
+    0 0 20px purple, 0 0 40px aqua;
+}
+
+.game-over {
+    color: red;
+    font-family: "HennyPenny";
+    font-size: 60px;
+}
+
+.combat-text {
+    color: white; 
+    text-align: center;
+    font-family: "Dynapuff";
+    font-size: 25px;
+}
+
+.weapons-chosen {
+   
+    color: white; 
+    text-align: center;
+    font-size: 20px;
+    font-family: "Dynapuff";
+    background-color: black;
+ 
+
+  
+}
+
+.score {
+    display: flex;
+    text-align: center;
+    color: white; 
+    justify-content: center;
+    font-family: "Dynapuff";
+    font-size: 40px;
+    background-color: black;
+   
+}
+
+.alien img {
+    width: 300px;
+    position: absolute;
+    bottom: 75px;
+    left: 1600px;
+}
+
+a {
+    color: white; 
+}
+
+ul {
+
+    padding: 5px;
+    font-size: 15px;
+ 
+    
+}
+.the-rules {
+    color: white;
+    text-align: center;
+    font-family: "Dynapuff";
+    
+}
+.rule-container {
+    margin: 50px;
+    background: black;
+    color: white;
+}
+
+.back-to-game button {
+    background-color: aqua;
+    border-radius: 10px;
+    border-style: ridge;
+    border-color: black;
+    padding: 10px;
+    font-family: "Dynapuff";
+    font-size: 15px;
+}
+
+h3 {
+    font-size: 45px;
+    text-shadow:
+    0 0 5px pink, 0 0 10px magenta,
+    0 0 20px purple, 0 0 40px aqua;
+
+}

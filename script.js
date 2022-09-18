@@ -1,5 +1,7 @@
 // DOM variables //
+const gameOver = document.querySelector('.game-over');
 const playAgain = document.querySelector('.play-again');
+const restartButton = document.querySelector('#restart');
 const weaponButtons = document.querySelectorAll('.weapons');
 const fightText = document.querySelector('.combat-text');
 const weaponsChosen = document.querySelector('.weapons-chosen');
@@ -26,8 +28,8 @@ let playerScore = 0;
 let rounds = 0;
 let playerChoice, computerChoice;
 
+weaponButtons.disabled = false; 
 // add event listener to ID for weapon buttons & store variable//
-
 weaponButtons.forEach(function(id) {
     document.querySelectorAll('.weapons').forEach(id => {
         id.addEventListener('click', event => {
@@ -93,17 +95,21 @@ weaponButtons.forEach(function(id) {
 
             function checkWinner() {
                 if (playerScore === 5) {
+                   
                     fightText.innerText = 'Good news everyone! You beat that dastardly computer!';
+                    gameOver.innerText = "Game Over! Want to play again?";
+                    weaponButtons.disabled = true;
                 } else if (computerScore === 5) {
+                    
                     fightText.innerText = 'Bad news no one. That darn computer won! Better luck next time.';
+                    gameOver.innerText = "Game Over! Want to play again?";
+                    weaponButtons.disabled = true;
                 }
-
             }
         })
     })
 
 })
-
 // get computer choice //
 
 function getComputerChoice() {
@@ -116,3 +122,4 @@ function getRandomNum() {
     randomNumber = Math.floor(Math.random() * 5);
     return randomNumber;
 }
+

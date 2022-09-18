@@ -4,38 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
-    <script src="code.js" defer></script>
-    <title>Rock, Paper, Scissors</title>
-   
+    <title>Document</title>
+    <link rel="stylesheet" href="styling.css">
+    <script src="script.js" defer></script>
+    <title>Rock, Paper, Scissors, Lizard, Spock</title>
 </head>
 <body>
-    <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
-    <h2>What weapon will you choose?</h2>
-    
-    <div class="game-container">      
-       <div id="button-container">
-        <button id="rock" name="rock" value="rock">
-            <img src="./images/rock-icon-edit1.png"><span>Rock</span></button>
-        <button id="paper" value="paper">Paper</button>
-        <button id="scissors" value="scissors">Scissors</button>
-        <button id="lizard" value="lizard">Lizard</button>
-        <button id="spock" value="spock">Spock</button>
-       </div>
-       <div id="alien-container">
-        <div id="alien" class="alienimg">
-            <img src="./images/friendly-alien-edit.png" alt="friendly blue alien" />
-        </div>
-        </div>
-    <div id="scoreboard" class="infinity">
-        The score is 
-        <br>
-        computer vs. user
-        <img src="./images/infinity1.png" alt="infinity symbol"/>
-    </div>
-  </div>
 
- 
-   
+    <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
+    <h2>What is your weapon of choice?</h2>
+    <div class="weapons">
+        <button class="playerChoice" id="rock"> Rock</button>
+        <button class="playerChoice" id="paper">Paper </button>
+        <button class="playerChoice" id="scissors">Scissors </button>
+        <button class="playerChoice" id="lizard">Lizard </button>
+        <button class="playerChoice" id="spock">Spock </button> 
+    </div>
+
+    <div>
+        <div class="Scoreboard">
+           <span class="round"></span>
+           <br>
+           <span class="score"> </span>
+        <div class="weapons-chosen"></div>
+        <div class="combat-text"></div>
+    </div>
+    <div class="game-over"></div>
+    <div class="play-again">
+        <button id="restart" onClick="window.location.reload();">Restart Game</button>
+    </div>
+    <div class="alien">
+        <img src="./images/friendly-alien-edit.png">
+    </div>
+
+
+    <div class="footer">
+        <p class="copyright">&copy;<a href="https://github.com/xila89">Xila89</a></p>
+        <p class="Rules"><a href="./rules.html">Rule Refresher</a></p>
+    </div>
 </body>
-</html>
